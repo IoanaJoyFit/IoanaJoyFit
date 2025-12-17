@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IoanaJoyFit</title>
+  <link rel="stylesheet" href="css/online_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+</head>
+<body>
+  <!-- Header cu videoclip de fundal și meniu modern -->
+  <header class="header" id="hero">
+
+    <!-- Video -->
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="images/online.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Navbar responsive -->
+    <nav class="navbar container">
+      <a href="index.html" class="logo">Ioana<span>JoyFit</span></a>
+    
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#home">Descriere</a></li>
+        <li><a href="#retreat">Galerie</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-content container">
+      <h1>Antrenamente online</h1>
+      <p>Antrenamente personalizate pentru un stil de viață activ și echilibrat</p>
+    </div>
+
+  <svg class="wave-svg header-wave" viewBox="0 0 1330 130" preserveAspectRatio="none">
+    <path id="wavePathBottom"
+      fill="#fff"
+      d="M0,80 C250,120 620,40 900,80 1440,120 1400,0 1300,0 L0,0 Z"/>
+  </svg>
+  </header>
+
+
+<!-- Secțiunea Home -->
+<section id="home" class="section yellow-bg">
+  <!-- Wave animat la început -->
+  <svg class="wave-svg top-wave" viewBox="0 0 1330 100" preserveAspectRatio="none">
+    <path id="wavePathTop"
+      fill="#fff"
+      d="M0,80 C360,120 720,40 1080,80 1440,120 1440,0 1440,0 L0,0 Z"/>
+  </svg>
+
+  <div class="home_container">
+    <h2>Beneficiile antrenamentelor online</h2>
+    
+    <!-- TOATE paragrafele într-un singur div home-text -->
+    <div class="home-text">
+        <p>Program adaptabil: te poți antrena oricând, fără să depinzi de orele sălii de sport.</p>
+        <p>Abonamentele online sunt adesea mai accesibile decât cele la sală.</p>
+        <p>Elimină costuri suplimentare cu transportul sau echipamentele obligatorii din sală.</p>
+        <p>Posibilitatea de a alege nivelul de dificultate și durata potrivită pentru tine.</p>
+        <p>Pentru persoanele timide sau care se simt inconfortabil într-o sală plină, online-ul oferă un mediu sigur.</p>
+        <p>Este ideal pentru începători sau pentru cei care se recuperează după accidentări.</p>
+        <p>Feedback rapid de la instructori, chiar dacă nu sunteți în aceeași locație.</p>
+        <p>Majoritatea antrenamentelor online pot fi făcute cu lucruri simple din casă: un scaun stabil pentru exerciții de echilibru sau flotări modificate; sticle cu apă sau cărți pentru greutăți</p>
+    </div>       
+  </div>
+
+  <!-- Wave animat la final -->
+  <svg class="wave-svg bottom-wave" viewBox="0 0 1350 150" preserveAspectRatio="none">
+    <path id="wavePathBottom"
+      fill="#fff"
+      d="M0,80 C360,120 720,40 1000,80 1340,120 1440,0 1440,0 L0,0 Z"/>
+  </svg>
+</section>
+
+<section id="retreat" class="retreat-section">
+  <div class="retreat-text">
+    <h2>Galerie</h2>  
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-item tall"><img src="images/online/online1.jpg" alt="Imagine 1"></div>
+    <div class="gallery-item"><img src="images/online/online2.jpeg" alt="Imagine 2"></div>
+    <div class="gallery-item wide"><img src="images/online/online3.jpeg" alt="Imagine 3"></div>
+    <div class="gallery-item"><img src="images/online/online4.jpeg" alt="Imagine 4"></div>
+    <div class="gallery-item tall"><img src="images/online/online5.jpeg" alt="Imagine 5"></div>
+    <div class="gallery-item"><img src="images/online/online6.jpeg" alt="Imagine 6"></div>
+    <div class="gallery-item wide"><img src="images/online/online7.jpeg" alt="Imagine 7"></div>
+    <div class="gallery-item"><img src="images/online/online8.jpeg" alt="Imagine 8"></div>
+  </div>
+
+    <!-- Galerie Mobil (Carusel) -->
+  <div class="gallery-carousel swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/online/online1.jpg" alt="Imagine 1"></div>
+      <div class="swiper-slide"><img src="images/online/online2.jpeg" alt="Imagine 2"></div>
+      <div class="swiper-slide"><img src="images/online/online3.jpeg" alt="Imagine 3"></div>
+      <div class="swiper-slide"><img src="images/online/online4.jpeg" alt="Imagine 4"></div>
+      <div class="swiper-slide"><img src="images/online/online5.jpeg" alt="Imagine 5"></div>
+      <div class="swiper-slide"><img src="images/online/online6.jpeg" alt="Imagine 6"></div>
+      <div class="swiper-slide"><img src="images/online/online7.jpeg" alt="Imagine 7"></div>
+      <div class="swiper-slide"><img src="images/online/online8.jpeg" alt="Imagine 8"></div>
+      <div class="swiper-slide"><img src="images/online/online9.jpeg" alt="Imagine 8"></div>
+    </div>
+  
+    <!-- Buline paginare -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+</section>
+
+  <svg width="100%" height="100%" id="svg" viewBox="0 0 1400 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 L 0,225 C 136.85714285714286,199.625 273.7142857142857,174.25 389,157 C 504.2857142857143,139.75 598,130.625 727,117 C 856,103.375 1020.2857142857144,85.25 1145,65 C 1269.7142857142856,44.75000000000001 1354.8571428571427,22.375000000000004 1440,0 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#FF9800" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
+
+  <footer class="footer container">
+    <p>&copy; 2025 Copyrights IoanaJoyFit. </p>
+  </footer>
+
+  <script src="JavaScripts/menu_script.js"></script>
+  <script src="JavaScripts/pachete_script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="JavaScripts/swiper.js"></script>
+  <!-- <script src="scroll-to-top.js"></script> -->
+  <script src="JavaScripts/back-to-home.js"></script>
+
+</body>
+</html>
