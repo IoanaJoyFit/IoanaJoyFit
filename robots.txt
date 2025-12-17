@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ioanajoyfit.github.io/IoanaJoyFit/sitemap.xml
