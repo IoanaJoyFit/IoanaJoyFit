@@ -18,147 +18,166 @@ if (isSubpage || currentPage.includes('pilates') || currentPage.includes('online
 
   // Stilizare buton
   const style = document.createElement('style');
-  style.textContent = `
-    #backToHome {
-      position: fixed;
-      bottom: 30px;
-      left: 30px;
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #FF7900 0%, #FF9800 100%);
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-size: 22px;
-      box-shadow: 0 8px 25px rgba(255, 121, 0, 0.4);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(20px) scale(0.8);
-      animation: fadeInLeft 0.6s ease forwards 0.5s;
-    }
+style.textContent = `
+  #backToHome {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
 
-    @keyframes fadeInLeft {
-      to {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0) scale(1);
-      }
-    }
+    background: linear-gradient(
+      135deg,
+      #fabfd3 0%,
+      #e26aa5 100%
+    );
 
-    #backToHome:hover {
-      transform: translateX(-5px) scale(1.1);
-      box-shadow: 0 12px 35px rgba(255, 121, 0, 0.6);
-      background: linear-gradient(135deg, #FF9800 0%, #ffc400 100%);
-    }
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
 
-    #backToHome:active {
-      transform: translateX(-3px) scale(1.05);
-    }
+    box-shadow:
+      0 10px 30px rgba(226,106,165,0.45);
 
-    #backToHome i {
-      animation: slideLeft 2s infinite;
-    }
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
 
-    @keyframes slideLeft {
-      0%, 100% {
-        transform: translateX(0);
-      }
-      50% {
-        transform: translateX(-5px);
-      }
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 
-    /* Badge cu text "Home" - apare la hover */
-    #backToHome::after {
-      content: 'Home';
-      position: absolute;
-      left: 70px;
-      background: rgba(26, 26, 26, 0.95);
-      color: white;
-      padding: 8px 15px;
-      border-radius: 8px;
-      font-family: 'Poppins', sans-serif;
-      font-size: 13px;
-      font-weight: 500;
-      white-space: nowrap;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateX(-10px);
-      transition: all 0.3s ease;
-      pointer-events: none;
-    }
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.8);
+    animation: fadeInLeft 0.6s ease forwards 0.5s;
+  }
 
-    #backToHome:hover::after {
+  @keyframes fadeInLeft {
+    to {
       opacity: 1;
       visibility: visible;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  #backToHome:hover {
+    transform: translateX(-6px) scale(1.12);
+    background: linear-gradient(
+      135deg,
+      #e26aa5 0%,
+      #b84478 100%
+    );
+    box-shadow:
+      0 16px 45px rgba(184,68,120,0.55);
+  }
+
+  #backToHome:active {
+    transform: translateX(-4px) scale(1.05);
+  }
+
+  #backToHome i {
+    animation: slideLeft 2s infinite;
+  }
+
+  @keyframes slideLeft {
+    0%, 100% {
       transform: translateX(0);
     }
+    50% {
+      transform: translateX(-6px);
+    }
+  }
 
-    /* Arrow indicator pentru badge */
+  /* Tooltip HOME */
+  // #backToHome::after {
+  //   content: 'Home';
+  //   position: absolute;
+  //   left: 70px;
+  //   background: rgba(32, 18, 26, 0.95);
+  //   color: white;
+  //   padding: 8px 16px;
+  //   border-radius: 10px;
+
+  //   font-family: 'Poppins', sans-serif;
+  //   font-size: 13px;
+  //   font-weight: 500;
+
+  //   white letter-spacing: 0.5px;
+
+  //   opacity: 0;
+  //   visibility: hidden;
+  //   transform: translateX(-10px);
+  //   transition: all 0.3s ease;
+  //   pointer-events: none;
+  // }
+
+  #backToHome:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  /* Săgeată tooltip */
+  // #backToHome::before {
+  //   content: '';
+  //   position: absolute;
+  //   left: 62px;
+  //   width: 0;
+  //   height: 0;
+  //   border-top: 6px solid transparent;
+  //   border-bottom: 6px solid transparent;
+  //   border-right: 8px solid rgba(32, 18, 26, 0.95);
+  //   opacity: 0;
+  //   visibility: hidden;
+  //   transition: all 0.3s ease;
+  //   pointer-events: none;
+  // }
+
+  #backToHome:hover::before {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    #backToHome {
+      width: 50px;
+      height: 50px;
+      bottom: 20px;
+      left: 20px;
+      font-size: 20px;
+    }
+
+    #backToHome::after {
+      left: 65px;
+      font-size: 12px;
+      padding: 6px 14px;
+    }
+
     #backToHome::before {
-      content: '';
-      position: absolute;
-      left: 62px;
-      width: 0;
-      height: 0;
-      border-top: 6px solid transparent;
-      border-bottom: 6px solid transparent;
-      border-right: 8px solid rgba(26, 26, 26, 0.95);
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      pointer-events: none;
+      left: 57px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #backToHome {
+      width: 45px;
+      height: 45px;
+      bottom: 15px;
+      left: 15px;
+      font-size: 18px;
     }
 
-    #backToHome:hover::before {
-      opacity: 1;
-      visibility: visible;
+    #backToHome::after,
+    #backToHome::before {
+      display: none;
     }
+  }
+`;
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      #backToHome {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        left: 20px;
-        font-size: 20px;
-      }
-
-      #backToHome::after {
-        left: 65px;
-        font-size: 12px;
-        padding: 6px 12px;
-      }
-
-      #backToHome::before {
-        left: 57px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      #backToHome {
-        width: 45px;
-        height: 45px;
-        bottom: 15px;
-        left: 15px;
-        font-size: 18px;
-      }
-
-      /* Ascundem tooltip-ul pe ecrane foarte mici */
-      #backToHome::after,
-      #backToHome::before {
-        display: none;
-      }
-    }
-  `;
   document.head.appendChild(style);
 }
 

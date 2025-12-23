@@ -7,7 +7,7 @@ scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
 scrollToTopBtn.setAttribute('aria-label', 'Scroll to top');
 document.body.appendChild(scrollToTopBtn);
 
-// Stilizare buton (adaugă acest CSS în style.css sau într-un tag <style>)
+// Stilizare buton
 const style = document.createElement('style');
 style.textContent = `
   #scrollToTop {
@@ -17,17 +17,32 @@ style.textContent = `
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #FF7900 0%, #FF9800 100%);
+    
+    /* Gradient roz identic cu butonul Back to Home */
+    background: linear-gradient(
+      135deg,
+      #fabfd3 0%,
+      #e26aa5 100%
+    );
+    
     color: white;
     border: none;
     cursor: pointer;
     font-size: 22px;
-    box-shadow: 0 8px 25px rgba(255, 121, 0, 0.4);
+    
+    /* Shadow roz */
+    box-shadow: 0 10px 30px rgba(226, 106, 165, 0.45);
+    
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1000;
+    
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px) scale(0.8);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   #scrollToTop.visible {
@@ -37,19 +52,23 @@ style.textContent = `
   }
 
   #scrollToTop:hover {
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 12px 35px rgba(255, 121, 0, 0.6);
-    background: linear-gradient(135deg, #FF9800 0%, #ffc400 100%);
+    transform: translateY(-6px) scale(1.12);
+    
+    /* Gradient hover roz mai închis */
+    background: linear-gradient(
+      135deg,
+      #e26aa5 0%,
+      #b84478 100%
+    );
+    
+    box-shadow: 0 16px 45px rgba(184, 68, 120, 0.55);
   }
 
   #scrollToTop:active {
-    transform: translateY(-3px) scale(1.05);
+    transform: translateY(-4px) scale(1.05);
   }
 
   #scrollToTop i {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     animation: bounceUp 2s infinite;
   }
 
@@ -62,6 +81,55 @@ style.textContent = `
     }
   }
 
+  /* Tooltip opțional (ca la Back to Home) */
+  // #scrollToTop::after {
+  //   content: 'Sus';
+  //   position: absolute;
+  //   right: 70px;
+  //   background: rgba(32, 18, 26, 0.95);
+  //   color: white;
+  //   padding: 8px 16px;
+  //   border-radius: 10px;
+    
+  //   font-family: 'Poppins', sans-serif;
+  //   font-size: 13px;
+  //   font-weight: 500;
+  //   letter-spacing: 0.5px;
+    
+  //   opacity: 0;
+  //   visibility: hidden;
+  //   transform: translateX(10px);
+  //   transition: all 0.3s ease;
+  //   pointer-events: none;
+  // }
+
+  #scrollToTop:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  /* Săgeată tooltip */
+  // #scrollToTop::before {
+  //   content: '';
+  //   position: absolute;
+  //   right: 62px;
+  //   width: 0;
+  //   height: 0;
+  //   border-top: 6px solid transparent;
+  //   border-bottom: 6px solid transparent;
+  //   border-left: 8px solid rgba(32, 18, 26, 0.95);
+  //   opacity: 0;
+  //   visibility: hidden;
+  //   transition: all 0.3s ease;
+  //   pointer-events: none;
+  // }
+
+  #scrollToTop:hover::before {
+    opacity: 1;
+    visibility: visible;
+  }
+
   /* Responsive */
   @media (max-width: 768px) {
     #scrollToTop {
@@ -70,6 +138,16 @@ style.textContent = `
       bottom: 20px;
       right: 20px;
       font-size: 20px;
+    }
+
+    #scrollToTop::after {
+      right: 65px;
+      font-size: 12px;
+      padding: 6px 14px;
+    }
+
+    #scrollToTop::before {
+      right: 57px;
     }
   }
 
@@ -80,6 +158,11 @@ style.textContent = `
       bottom: 15px;
       right: 15px;
       font-size: 18px;
+    }
+
+    #scrollToTop::after,
+    #scrollToTop::before {
+      display: none;
     }
   }
 `;

@@ -7,8 +7,35 @@
 }
 
 :root {
-  --primary-orange: #FF7900;
-  --secondary-gradient: linear-gradient(135deg, #FF7900 0%, #ffc400 100%);
+  --primary-pink: #fabfd3;
+  --secondary-pink: #f8a5c2;
+  --dark-pink: #e691b5;
+  --light-pink: #fdd4e3;
+  --secondary-gradient: linear-gradient(135deg, #fabfd3 0%, #f8a5c2 100%);
+}
+
+/* ====== TITLU STATEMENT (ABORDAREA NOASTRĂ STYLE) ====== */
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 56px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+
+  background: linear-gradient(
+    90deg,
+    var(--pink-deep),
+    var(--pink-main)
+  );
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
+
+  text-shadow:
+    4px 4px 0 rgba(0,0,0,0.08),
+    8px 8px 25px rgba(253, 45, 145, 0.75);
+
+  margin-bottom: 70px;
 }
 
 body {
@@ -41,16 +68,32 @@ body {
   z-index: 0;
 }
 
-/* Overlay portocaliu ca în pagina principală */
-.overlay {
+/* Overlay roz */
+/* .overlay {
   position: absolute;
   top: 0; 
   left: 0;
   width: 100%; 
   height: 100%;
-  background: linear-gradient(135deg, rgba(255, 121, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(135deg, rgba(250, 191, 211, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
+  z-index: 1;
+} */
+
+/* Overlay modern – soft luxury */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(250, 191, 211, 0.25) 45%,
+      rgba(250, 191, 211, 0.15) 100%
+    );
   z-index: 1;
 }
+
+
 
 .header-content,
 .navbar {
@@ -58,7 +101,7 @@ body {
   z-index: 2;
 }
 
-/* ====== NAVBAR MODERN - UNIFORM CU PAGINA PRINCIPALĂ ====== */
+/* ====== NAVBAR MODERN ====== */
 .navbar {
   width: 100%;
   position: absolute;
@@ -143,7 +186,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #FF9800;
+  color: #fabfd3;
 }
 
 .nav-links a:hover::after {
@@ -151,7 +194,7 @@ body {
 }
 
 .nav-links a.active {
-  color: #FF9800;
+  color: #fabfd3;
 }
 
 .nav-links a.active::after {
@@ -179,7 +222,7 @@ body {
 
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(8px, 8px);
-  background: #FF9800;
+  background: #fabfd3;
 }
 
 .hamburger.active span:nth-child(2) {
@@ -189,7 +232,7 @@ body {
 
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(8px, -8px);
-  background: #FF9800;
+  background: #fabfd3;
 }
 
 /* ====== MOBILE MENU ====== */
@@ -270,6 +313,7 @@ body {
 
 .header-content h1 {
   font-family: 'Montserrat', sans-serif;
+  /* color: #fabfd3; */
   font-size: 42px;
   font-weight: 800;
   margin-bottom: 20px;
@@ -338,11 +382,11 @@ body {
   }
 }
 
-/* ====== SECTIUNEA HOME - STIL UNIFORM ====== */
+/* ====== SECTIUNEA HOME - TEMA ROZ ====== */
 .yellow-bg {
   position: relative;
   padding: 100px 5%;
-  background: linear-gradient(135deg, #FF9800 0%, #FF9800 100%);
+  background: linear-gradient(135deg, #fabfd3 0%, #f8a5c2 100%);
   overflow: hidden;
 }
 
@@ -354,8 +398,8 @@ body {
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 10% 20%, rgba(255,255,255,0.05) 0%, transparent 50%),
-    radial-gradient(circle at 90% 80%, rgba(255,255,255,0.05) 0%, transparent 50%);
+    radial-gradient(circle at 10% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
@@ -395,11 +439,14 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 46px;
   font-weight: 800;
-  color: #fff;
+  color: #555;
   text-align: center;
   margin-bottom: 60px;
   line-height: 1.2;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  /* text-shadow: 2px 2px 8px rgba(0,0,0,0.15); */
+    text-shadow:
+    4px 4px 0 rgba(0,0,0,0.08),
+     8px 8px 25px rgba(253, 211, 232, 0.75);
   letter-spacing: 1px;
   text-transform: none;
   opacity: 0;
@@ -426,7 +473,7 @@ body {
   background: white;
   border-radius: 25px;
   padding: 40px 35px 40px 75px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 15px 40px rgba(250, 191, 211, 0.2);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -449,7 +496,7 @@ body {
   transform: translateY(0);
 }
 
-/* Linie portocalie sus */
+/* Linie roz sus */
 .home-text p::before {
   content: '';
   position: absolute;
@@ -457,7 +504,7 @@ body {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #555 0%, #555 100%);
+  background: linear-gradient(90deg, #e691b5 0%, #e691b5 100%);
   transform: scaleX(0);
   transition: transform 0.4s ease;
 }
@@ -473,7 +520,7 @@ body {
   left: 28px;
   top: 50%;
   transform: translateY(-50%);
-  background: linear-gradient(135deg, #FF7900, #FF9800);
+  background: linear-gradient(135deg, #fabfd3, #f8a5c2);
   color: white;
   font-size: 18px;
   font-weight: bold;
@@ -483,18 +530,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(255,121,0,0.3);
+  box-shadow: 0 4px 12px rgba(250, 191, 211, 0.4);
   transition: all 0.3s ease;
 }
 
 .home-text p:hover {
   transform: translateY(-10px);
-  box-shadow: 0 25px 60px rgba(255,121,0,0.25);
+  box-shadow: 0 25px 60px rgba(250, 191, 211, 0.3);
 }
 
 .home-text p:hover::after {
   transform: translateY(-50%) scale(1.15) rotate(5deg);
-  box-shadow: 0 6px 18px rgba(255,121,0,0.5);
+  box-shadow: 0 6px 18px rgba(250, 191, 211, 0.6);
 }
 
 /* Delay pentru animații */
@@ -515,7 +562,6 @@ body {
 .retreat-section {
   position: relative;
   padding: 100px 5%;
-  /* background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); */
   overflow: hidden;
 }
 
@@ -526,7 +572,6 @@ body {
   right: -10%;
   width: 600px;
   height: 600px;
-  /* background: radial-gradient(circle, rgba(255,121,0,0.08) 0%, transparent 70%); */
   border-radius: 50%;
   z-index: 0;
 }
@@ -542,7 +587,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 46px;
   font-weight: 800;
-  color: #1a1a1a;
+  color: #333;
   margin-bottom: 20px;
   opacity: 0;
   transform: translateY(50px);
@@ -598,7 +643,7 @@ body {
 
 .gallery-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(255,121,0,0.25);
+  box-shadow: 0 10px 25px rgba(250, 191, 211, 0.35);
 }
 
 /* Carousel pentru mobil */
@@ -709,20 +754,20 @@ body {
   .swiper-pagination-bullet {
     width: 14px;
     height: 14px;
-    background-color: #FF9800 !important;
+    background-color: #fabfd3 !important;
     opacity: 0.5;
     border-radius: 50%;
     margin: 0 6px !important;
-    box-shadow: 0 0 4px rgba(255, 121, 0, 0.5);
+    box-shadow: 0 0 4px rgba(250, 191, 211, 0.5);
     transition: all 0.3s ease;
   }
 
   .swiper-pagination-bullet-active {
     width: 16px;
     height: 16px;
-    background-color: #FF9800 !important;
+    background-color: #f8a5c2 !important;
     opacity: 1;
-    box-shadow: 0 0 8px rgba(255, 121, 0, 0.7);
+    box-shadow: 0 0 8px rgba(248, 165, 194, 0.7);
   }
 }
 
@@ -802,7 +847,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #FF9500 0%, #FFB100 100%);
+  background: linear-gradient(135deg, #f8a5c2 0%, #fabfd3 100%);
 }
 
 /* ====== FOOTER MODERN INTEGRAT CU WAVE ====== */
@@ -829,4 +874,17 @@ body {
 .footer p:hover {
   color: #fff;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 36px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 30px;
+  }
 }
