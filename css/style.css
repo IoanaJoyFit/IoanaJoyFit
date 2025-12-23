@@ -4301,6 +4301,10 @@ box-shadow: 0 15px 40px rgba(226, 106, 165, 0.18);
     font-size: 14px !important;
     padding: 28px 22px 28px 58px !important;
   }
+
+  html, body {
+  overflow-x: hidden;
+}
 }
 
 @media (max-width: 480px) {
@@ -4315,11 +4319,13 @@ box-shadow: 0 15px 40px rgba(226, 106, 165, 0.18);
   .home-text p {
     font-size: 13px !important;
   }
+
+  html, body {
+  overflow-x: hidden;
+}
 }
 
-/* html, body {
-  overflow-x: hidden;
-} */
+
 
 /* ====== FOOTER MODERN INTEGRAT CU WAVE ====== */
 .footer {
