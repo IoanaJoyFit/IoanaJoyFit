@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://ioanajoyfit.github.io/IoanaJoyFit/</loc>
+    <loc>https://ioanajoyfit.ro/</loc>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://ioanajoyfit.github.io/IoanaJoyFit/pilates.html</loc>
+    <loc>https://ioanajoyfit.ro/pilates.html</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ioanajoyfit.github.io/IoanaJoyFit/online.html</loc>
+    <loc>https://ioanajoyfit.ro/online.html</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ioanajoyfit.github.io/IoanaJoyFit/adolescenti.html</loc>
+    <loc>https://ioanajoyfit.ro/adolescenti.html</loc>
     <priority>0.8</priority>
   </url>
 
