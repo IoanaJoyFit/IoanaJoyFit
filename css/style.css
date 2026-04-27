@@ -26,7 +26,52 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* HEADER CU VIDEO */
+ /* HEADER CU VIDEO */
+/*.header {
+  position: relative;
+  height: 98vh;
+  min-height: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+} */
+
+/* Video și overlay rămân la fel */
+/* .bg-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+} */
+
+/* @media (max-width: 768px) {
+  .bg-video {
+    object-position: center top;  */
+    /* sau:
+       center center
+       center 30%
+       50% 20%
+    */
+  /* }
+} */
+
+/* .overlay {
+  position: absolute;
+  inset: 0; */
+  /* background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(250, 191, 211, 0.25) 45%,
+      rgba(250, 191, 211, 0.15) 100%
+    ); */
+  /* z-index: 1;
+} */
+
 .header {
   position: relative;
   height: 98vh;
@@ -39,25 +84,39 @@ body {
   background: #000;
 }
 
-/* Video și overlay rămân la fel */
+/* IMPORTANT: pentru picture + img */
 .bg-video {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 0;
 }
 
+.bg-video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /* FOARTE IMPORTANT */
+}
+
+/* Mobile tweak */
+@media (max-width: 768px) {
+  .bg-video img {
+    object-position: center top;
+  }
+
+  .header {
+    height: 95vh; /* mai bine pe mobil */
+  }
+}
+
+/* Overlay pentru contrast */
 .overlay {
   position: absolute;
   inset: 0;
-  /* background:
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.55) 0%,
-      rgba(250, 191, 211, 0.25) 45%,
-      rgba(250, 191, 211, 0.15) 100%
-    ); */
+  background: rgba(0,0,0,0.45);
   z-index: 1;
 }
 
@@ -357,6 +416,7 @@ body {
 
 /* TEXT DIN HEADER - TIPOGRAFIE PUTERNICĂ */
 .header-content {
+  margin-top: 20px;
   text-align: center;
   /* color: white; */
   z-index: 2;
