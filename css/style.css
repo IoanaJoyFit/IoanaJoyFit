@@ -84,39 +84,94 @@ body {
   background: #000;
 }
 
-/* IMPORTANT: pentru picture + img */
+/* TEXT DIN HEADER - TIPOGRAFIE PUTERNICĂ */
+.header-content {
+  margin-top: 65px;
+  text-align: center;
+  /* color: white; */
+  z-index: 2;
+}
+
+.header-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #f995c0;
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.header-content p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-weight: 400;
+  color: white;
+}
+
+/* imaginea de bază */
 .bg-video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
   z-index: 0;
 }
 
-.bg-video img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block; /* FOARTE IMPORTANT */
+/* desktop ON, mobile OFF */
+.desktop-img {
+  display: block;
 }
 
-/* Mobile tweak */
+.mobile-img {
+  display: none;
+}
+
+/* 📱 pe mobil inversăm */
 @media (max-width: 768px) {
-  .bg-video img {
-    object-position: center top;
+
+
+   /* .header-content h1 {
+    font-size: 18px; 
+    line-height: 1.2;
+  } */
+
+  .header-content p {
+    font-size: 14px;
+    margin: 10px 0 20px;
+  }
+
+  .header-content .btn-1 {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .desktop-img {
+    display: none;
+  }
+
+  .mobile-img {
+    display: block;
+  }
+
+  .mobile-img {
+    object-position: center top; /* ajustezi dacă vrei */
   }
 
   .header {
-    height: 95vh; /* mai bine pe mobil */
+    height: 95vh;
   }
+
 }
 
 /* Overlay pentru contrast */
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.25);
   z-index: 1;
 }
 
@@ -414,30 +469,6 @@ body {
   }
 }
 
-/* TEXT DIN HEADER - TIPOGRAFIE PUTERNICĂ */
-.header-content {
-  margin-top: 20px;
-  text-align: center;
-  /* color: white; */
-  z-index: 2;
-}
-
-.header-content h1 {
-  font-family: 'Montserrat', sans-serif;
-  color: #e691b5;
-  font-size: 40px;
-  font-weight: 800;
-  margin-bottom: 30px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.header-content p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px;
-  margin-bottom: 30px;
-  font-weight: 400;
-}
 
 /* BUTOANE CU BOX-SHADOW ANIMATE */
 .btn-1 {
@@ -4042,8 +4073,15 @@ box-shadow: 0 15px 40px rgba(226, 106, 165, 0.18);
 }
 
 /* ====== HEADER ====== */
+.header-content {
+  margin-top: 140px;
+  text-align: center;
+  /* color: white; */
+  z-index: 2;
+}
+
 .header-content h1 {
-  font-size: 32px !important; /* redus de la 50px */
+  font-size: 25px !important; /* redus de la 50px */
 }
 
 .header-content p {
